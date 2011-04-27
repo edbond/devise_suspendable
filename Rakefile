@@ -15,9 +15,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "devise_suspendable"
   gem.homepage = "http://github.com/amolk/devise_suspendable"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "amol@kingofweb.com"
+  gem.summary = %Q{Device module that provides a simple clean way to suspend an account}
+  gem.description = %Q{Devise-Suspendable is a simple module which uses the [Devise](http://github.com/plataformatec/devise) authentication framework Activatable module hooks to provide a simple clean way to suspend an account.
+  When an account is suspended the date and time of suspension is recorded, as well as an optional reason, for easy reference.}
+  gem.email = "kelkar.amol@gmail.com"
   gem.authors = ["Amol Kelkar"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
