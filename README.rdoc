@@ -6,21 +6,15 @@ When an account is suspended the date and time of suspension is recorded, as wel
 == Setup
 (Assumes that you have devise already setup and your device models, e.g. User, are already created)
 1. Add `gem devise_suspendable` in your Gemfile
-
 2. Create a migration to update each of your device model(s), e.g. User, that you want to be suspendable
   rails g devise_suspendable User
-
 3. Run the migration
   rake db:migrate
-
 4. Mark the model as suspendable
-
-    class User < ActiveRecord::Base
-
-      devise ..., :activatable, :suspendable
-
-      ...
-    end
+  class User < ActiveRecord::Base
+    devise ..., :activatable, :suspendable
+    ...
+  end
 
 == Notes
 - :suspendable depends on :activatable
@@ -34,11 +28,6 @@ When an account is suspended the date and time of suspension is recorded, as wel
 
 * [Devise](http://github.com/plataformatec/devise)
 * [Warden](http://github.com/hassox/warden)
-
-
-== TODO
-
-- tests, tests, tests
 
 == Thanks to
 * Josh Kalderimis for most of core logic for this gem
