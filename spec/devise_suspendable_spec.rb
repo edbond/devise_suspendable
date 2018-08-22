@@ -8,25 +8,25 @@ describe "DeviseSuspendable" do
   it 'is not in suspended state when created fresh' do
     user = Factory(:user)
     user.should_not be_suspended
-    user.should be_active 
+    user.should be_active_for_authentication 
   end
 
   it 'can be suspended' do
     user = Factory(:user)
     user.suspend!("has too many 'family members'")
     user.should be_suspended
-    user.should_not be_active 
+    user.should_not be_active_for_authentication 
   end
 
   it 'can be unsuspended' do
     user = Factory(:user, :suspended_at => 1.day.ago)
     user.should be_suspended
-    user.should_not be_active 
+    user.should_not be_active_for_authentication 
     
     user.unsuspend!
 
     user.should_not be_suspended
-    user.should be_active 
+    user.should be_active_for_authentication 
   end
 
 end
